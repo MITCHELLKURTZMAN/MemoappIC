@@ -1,0 +1,35 @@
+{
+  "canisters": {
+    "memoapp": {
+      "main": "src/memoapp/main.mo",
+      "type": "motoko"
+    },
+    "memoapp_assets": {
+      "dependencies": [
+        "memoapp"
+      ],
+      "frontend": {
+        "entrypoint": "src/memoapp_assets/src/index.html"
+      },
+      "source": [
+        "src/memoapp_assets/assets",
+        "dist/memoapp_assets/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "dfx": "0.9.2",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
