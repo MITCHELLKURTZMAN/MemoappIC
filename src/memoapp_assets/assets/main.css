@@ -1,37 +1,109 @@
 body {
-    font-family: sans-serif;
-    font-size: 1.5rem;
+    background-image: url("https://media1.giphy.com/media/l3q2RgN7WUjeUUXm0/giphy.gif?cid=ecf05e47lebxoi95gyw8vsklchdgk3oy4uv0wbrfe6m49do9&rid=giphy.gif&ct=g");
+    background-color: #040404;
+    background-repeat: repeat-y;
+    background-size: cover;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-img {
-    max-width: 50vw;
-    max-height: 25vw;
-    display: block;
-    margin: auto;
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace, 'Roboto Serif', sans-serif;
 }
 
-form {
+.container {
+    max-width: 960px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.notes-list {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr));
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.note.new {
+    background-color: #B7B7C0;
+}
+
+textarea {
+    border: none;
+    resize: none;
+    background-color: #B7B7C0;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+.delete {
+    background-color: #B7B7C0;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 10px 5px 10px;
+    outline: none;
+    box-shadow: 0 1px 2px
+}
+
+.delete:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+.save:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+.save {
+    background-color: #DBDBDF;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 10px 5px 10px;
+    outline: none;
+    box-shadow: 0 1px 2px
+}
+
+.newnote:hover {
+    background-color: white;
+    cursor: pointer;
+}
+
+.newnote {
+    background-color: #DBDBDF;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 10px 5px 10px;
+    outline: none;
+    box-shadow: 0 1px 2px
+}
+
+.note {
+    background-color: #4B4C61;
+    border-radius: 10px;
+    padding: 1rem;
+    min-height: 170px;
     display: flex;
-    justify-content: center;
-    gap: 0.5em;
-    flex-flow: row wrap;
-    max-width: 40vw;
-    margin: auto;
-    align-items: baseline;
+    flex-direction: column;
+    justify-content: space-between;
+    white-space: pre-wrap;
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
 }
 
-button[type="submit"] {
-    padding: 5px 20px;
-    margin: 10px auto;
-    float: right;
+.note-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-#greeting {
-    margin: 10px auto;
-    padding: 10px 60px;
-    border: 1px solid #222;
-}
-
-#greeting:empty {
-    display: none;
+.time {
+    text-align: justify;
+    display: inline-block;
 }
